@@ -50,4 +50,4 @@ if __name__ == '__main__':
 
 # Account = 0x42fAF6Ebc269A7648307c34722Ea782F1aF51333
 # Private Key = fb9fd945f75060d2cc2149dcfeeb797c9f39efc06d1de11fdfd1dd935eb03824
-# Amount = 5
+# Amount ~ 5
