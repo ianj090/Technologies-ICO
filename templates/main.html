@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap Simple Login Form</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<style type="text/css">
+	.login-form {
+		width: 340px;
+    	margin: 27% 20%;
+	}
+    .login-form form {
+    	margin-bottom: 15px;
+        background: #f7f7f7;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+    }
+    .login-form h2 {
+        margin: 0 0 15px;
+    }
+    .form-control, .btn {
+        min-height: 38px;
+        border-radius: 2px;
+    }
+    .btn {
+        font-size: 15px;
+        font-weight: bold;
+    }
+    html {
+        height: 100%;
+    }
+    body {
+        background-image: url('https://wallpaperaccess.com/full/2022710.jpg');
+        background-color: #021035;  
+        background-repeat: no-repeat;  
+        /* background-attachment: scroll;   */
+        background-position: center;
+        background-size: contain;
+    }
+</style>
+</head>
+<body>
+
+    
+{% for mesg in get_flashed_messages() %}
+<h3 style="color:#db0707; text-align:center; position:fixed; top:0; width:100%">{{ mesg }}</h3><br>
+{% endfor %}
+
+<div class="login-form">
+    <form action="" method="post">
+        <h2 class="text-center">Enter Information</h2>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Account" required="required" name="account">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Private Key" required="required" name="privateKey">
+
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Amount" required="required" name="amount">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">Log in</button>
+        </div>
+    </form>
+</div>
+</body>
+
+<script>
+</script>
+</html>
